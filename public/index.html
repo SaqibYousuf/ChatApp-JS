@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+   <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-auth.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyA-tS8pEJXHQykguUXidz0vxYg3TNxRujY",
+    authDomain: "chat-app-9a5b5.firebaseapp.com",
+    databaseURL: "https://chat-app-9a5b5.firebaseio.com",
+    projectId: "chat-app-9a5b5",
+    storageBucket: "chat-app-9a5b5.appspot.com",
+    messagingSenderId: "847511037967",
+    appId: "1:847511037967:web:73d03189e194dabbb55b7a",
+    measurementId: "G-WF8G22VPG3"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+</head>
+
+<body>
+    <div class="chatBotMain">
+        <h1 class="heading">Chat App</h1>
+        <div class="chatbotBody">
+            <div class="Chat">
+                <div class="MessegeDiv">
+                    <ul id="messeges" class="messeges">
+                        <!-- <li class="msg receiving">
+                           <div class="msgdiv"> <p class="Name">Michael Chang</p> <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt repellat magni aspernatur reprehenderit molestiae praesentium minus! Error, harum. Molestias temporibus quasi quas labore, repellendus vel incidunt qui ipsum aliquid. Incidunt? </p> </div>
+
+                        </li>
+                        <li class="msg sending">
+                           <div class="msgdiv"> <p class="Name">Michael Chang</p> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam necessitatibus animi obcaecati numquam? Dignissimos exercitationem dolor magni animi dolores ad, rem eos aspernatur suscipit, necessitatibus deserunt iure, laborum cupiditate totam. </p> </div>
+
+                        </li>
+                        <li class="msg receiving">
+                           <div class="msgdiv"> <p class="Name">Michael Chang</p> <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti temporibus perspiciatis saepe nulla voluptatem voluptates commodi error delectus cum, ratione repudiandae quae dolorum placeat excepturi totam, aspernatur, maiores eveniet in? </p> </div>
+
+                        </li> -->
+                        
+                    </ul>
+
+
+                </div>
+                <div class="msgInput">
+                    <input id="msginput" type="text" placeholder="Enter Your Message"> <button onclick="send()" id="send">Send</button>
+
+                </div>
+
+            </div>
+            <div class="Members">
+                <div class="memberList">
+
+                    <div class="online">
+                        <h4>Members Online</h4>
+
+                    </div>
+                    <ul id="usersOnline" class="usersOnline">
+                        <!-- <li id="users" class="users active">
+                        Michael Chang
+                        
+                    </li>
+                        <li id="users" class="users">
+                        Michael Chang
+                        
+                    </li>
+                    <li id="users" class="users">
+                        Michael Chang
+                        
+                    </li>
+                    <li id="users" class="users">
+                        Michael Chang
+                        
+                    </li>
+                    <li id="users" class="users">
+                        Michael Chang
+                        
+                    </li>
+                     -->
+                </ul>
+            </div>
+                <div class="Login">
+                    <div class="loginHead">
+                        <h4>LogIn</h4>
+                    </div>
+                    <div class="loginInput">
+                        <h6>Please LogIn With Your Facebook</h6>
+                        <div class="registerBtn">
+
+                            <button onclick="login()" id="loginbtn" class="loginbtn" >LogIn</button>
+                            <button onclick="logOut()" id="logOutbtn" class="logOutbtn" >logOut</button>
+                        </div>
+                            
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+<script src="app.js"></script>
+
+</html>

@@ -1,0 +1,235 @@
+body {
+    background: #de6161;
+    background: -webkit-linear-gradient(to right, #5579e2, #e28080);
+    background: linear-gradient(to right, #5579e2, #e28080);
+}
+input,
+button {
+    outline: none;
+}
+.heading {
+    text-align: center;
+    color: white;
+    font-weight: 600;
+}
+.chatbotBody {
+    background: #ffffff30;
+    width: 700px;
+    height: 500px;
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 0px 18px -5px #0000009e;
+    display: flex;
+}
+.Chat {
+    height: 100%;
+    width: 75%;
+}
+.memberList {
+    height: 60%;
+}
+.Members {
+    height: 100%;
+    width: 25%;
+    border-left: #ffffff1c solid 1px;
+    background: #ffffff1c;
+}
+.Members h4 {
+    text-align: center;
+    color: white;
+    font-weight: bolder;
+}
+.Members .users {
+    color: white;
+}
+.online {
+    height: 30%;
+    background: #ffffff17;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.active {
+    color: blue !important;
+}
+.loginHead {
+    height: 30%;
+    background: #ffffff17;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.loginInput {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.loginInput h6 {
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    margin: 17px 0px;
+}
+.loginInput input {
+    width: 96%;
+    height: 30px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #ffffff59;
+    text-align: center;
+}
+.loginbtn {
+    padding: 9px 20px;
+    margin-top: 8px;
+    border: none;
+    border-radius: 10px;
+}
+.logOutbtn {
+    padding: 9px 20px;
+    margin-top: 8px;
+    border: none;
+    border-radius: 10px;
+    display: none;
+}
+.sending {
+    width: 100%;
+    /* text-align: right; */
+    float: right;
+}
+.messeges {
+    list-style: none;
+    height: 100%;
+    padding: 0px;
+}
+.msg {
+    color: white;
+    height: 120px;
+    padding: 0px 0px 65px 10px;
+    max-width: 350px;
+}
+.msg .msgdiv {
+    background-color: #ffffff17;
+    /* height: 60px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 35px 10px;
+    border-radius: 20px;
+}
+.msgdiv {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+.sending .msgdiv {
+    float: right;
+    border-top-right-radius: 0px;
+}
+.receiving {
+    float: left;
+    width: 100%;
+}
+.receiving .msgdiv {
+    float: left;
+    border-top-left-radius: 0px;
+}
+.msgdiv p {
+    padding: 0px;
+    margin: 0px;
+}
+.MessegeDiv {
+    height: 85%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 12px;
+}
+.msgInput {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10%;
+}
+.msgInput input {
+    width: 90%;
+    height: 97%;
+    background-color: #ffffff2e;
+    border: none;
+    padding: 0px 30px;
+}
+.msgInput button {
+    height: 100%;
+    padding: 10px 20px;
+    border: none;
+    background-color: #ffffff2e;
+    border-left: 2px solid #ffffff59;
+    transition: 0.3s;
+}
+.msgInput button:hover {
+    background-color: rgba(255, 255, 255, 0.842);
+}
+
+.Name {
+    width: 100%;
+    font-size: 18px;
+    font-weight: 800;
+    padding-bottom: 10px !important;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+@media screen and (max-width: 768px) {
+    .chatbotBody {
+        width: 660px;
+        height: 440px;
+    }
+}
+@media screen and (max-width: 425px) {
+    .chatbotBody {
+        width: 100%;
+        flex-direction: column-reverse;
+        position: unset;
+        transform: unset;
+        height: 600px;
+    }
+    .Chat {
+        width: 100%;
+        height: 70%;
+    }
+    .Members {
+        display: flex;
+        height: 30%;
+        width: 100%;
+        border-bottom: 2px solid #ffffff17;
+    }
+    .Login {
+        width: 50%;
+        border-left: 2px solid #ffffff17;
+    }
+    .memberList{
+        width: 50%;
+        height: auto;
+    }
+}
+.usersOnline{
+    height: 63%;
+    overflow-y: scroll;
+}
