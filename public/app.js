@@ -15,7 +15,6 @@ firebase.auth().onAuthStateChanged(function (user) {
       .on("value", function (data) {
         userData = Object.values(data.val());
         members(userData);
-        //  messegeSend(userData, user)
       });
     loginUser = user;
     firebase
@@ -32,7 +31,6 @@ firebase.auth().onAuthStateChanged(function (user) {
 });
 
 function members(userData) {
-  // console.log(userData)
   document.getElementById("usersOnline").innerHTML = "";
   for (var i = 0; i < userData.length; i++) {
     if (userData[i].uid === loginUser.uid){
@@ -89,23 +87,11 @@ function logOut() {
       document.getElementById("logOutbtn").style.display = "none";
       alert("logout success");
       document.getElementById("usersOnline").innerHTML = "";
-      // console.log(loginUser)
       document.getElementById('send').disabled = true
     })
     .catch(function (error) {});
   firebase.database().ref("User").child(loginUser.uid).remove();
 }
-// function messegeSend(userData, user){
-//   for (let i = 0; i < userData.length; i++){
-//     if(userData[i].uid === user.uid){
-//       firebase.database().ref('User').Child(userData[i].key).set({
-//         name: userData[i].name,
-//         uid: userData[i].uid,
-//         name: userData[i].name
-//       })
-//     }
-//   }
-// }
 function send() {
   if (msgInput.value === "") {
     return;
@@ -116,7 +102,6 @@ function send() {
     uid: loginUser.uid,
   };
   firebase.database().ref("Messeges").push(msgObj);
-  // document.getElementById('messeges').innerHTML = ""
   msgInput.value = "";
 }
 firebase
@@ -145,26 +130,10 @@ function messegeSend(msgData) {
       `;
     }
 
-    //   if (msgData[i].uid === loginUser.uid){
-    // document.getElementById('msg').classList.add("sending")
-    // } else
-    // // if (msgData[i].uid !== loginUser.uid)
-    // {
-    // document.getElementById('msg').classList.add("receiving ")
-    // }
   }
 
-  // for (let j = 0; j < msgData.length; i++){
 
-  //   if (msgData[j].uid === loginUser.uid){
-  //       console.log(document.getElementById("msg"))
-  //       document.getElementById("msg").classList.add("sending")
-  //     }else {
-  //       console.log(document.getElementById("msg"))
-  //         document.getElementById("msg").classList.add("receiving")
 
-  //       }
-  //     }
   console.log(msgData + loginUser.uid);
 }
 var input = document.getElementById("msginput");
